@@ -34,6 +34,7 @@
             </div>
         </div>
     </nav>
+
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -45,8 +46,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    <div class="row">
-                        <button type="submit" class="btn btn-warning">Reserve Table</button>
+                    <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="tooltip" data-html="true" title="Or Call us at<br><strong>+9412345678</strong>" data-placement="bottom" href="#reserveform">Reserve Table</a>
                     </div>
                 </div>
             </div>
@@ -176,6 +176,11 @@
                         <li><a href="#">Menu</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
+                    <span class="navbar-text">
+                        <a data-toggle="modal" data-target="#loginModal" href="">
+                            <span class="fa fa-sign-in"></span>Login
+                        </a>
+                    </span>
                 </div>
                 <div class="cl-7 col-sm-5">
                     <h5>Our Address</h5>
@@ -215,6 +220,11 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 </body>
 
 </html>
