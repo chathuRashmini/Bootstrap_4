@@ -45,13 +45,101 @@
                 <div class="col-12 col-sm align-self-center">
                     <img src="img/logo.png" class="img-fluid">
                 </div>
-                <div class="col-12 col-sm align-self-center">
+                <!-- <div class="col-12 col-sm align-self-center">
                     <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="tooltip" data-html="true" title="Or Call us at<br><strong>+9412345678</strong>" data-placement="bottom" href="#reserveform">Reserve Table</a>
+                    </div>
+                </div> -->
+                <div class="col-12 col-sm align-self-center">
+                    <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="modal" data-target="#reserveModal">Reserve Table</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
+    <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve Table</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                            <div class="form-group row">
+                                <label for="guestnum" class="col-12 col-md-2 col-form-label">Number of Guests</label>
+                                <div class="col-md-1 col-sm-2">
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" name="count1" id="1" value="">
+                                        <label class="form-check-label" for="checkcontact">1</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-1 col-sm-2">
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" name="count2" id="2" value="">
+                                        <label class="form-check-label" for="checkcontact">2</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-1 col-sm-2">
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" name="count3" id="3" value="">
+                                        <label class="form-check-label" for="checkcontact">3</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-1 col-sm-2">
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" name="count4" id="4" value="">
+                                        <label class="form-check-label" for="checkcontact">4</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-1 col-sm-3">
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" name="count5" id="5" value="">
+                                        <label class="form-check-label" for="checkcontact">5</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-1 col-sm-2">
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" name="count6" id="6" value="">
+                                        <label class="form-check-label" for="checkcontact">6</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="section" class="col-12 col-md-2  col-sm-12 col-form-label">Section</label>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="btn-group">
+                                        <label class="btn btn-success btn-check" for="option1">Non-smoking</label>
+                                        <label class="btn btn-danger btn-check" for="option2">Smoking</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="telno" class="col-12 col-md-2  col-sm-12 col-form-label">Date and Time</label>
+                                <div class="col-md-3 col-sm-12">
+                                    <input type="text" class="form-control" id="areacode" name="areacode" placeholder="Date">
+                                </div>
+                                <div class="col-md-3 col-sm-12">
+                                    <input type="text" class="form-control" id="telenum" name="telenum" placeholder="Time">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="offset-md-2 col-md-2">
+                                    <button type="submit" class="btn btn-default">Cancel</button>
+                                </div>
+                                <div class="col-md-5">
+                                    <button type="submit" class="btn btn-primary">Reserve</button>
+                                </div>
+                            </div>
+                        </form>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div  class="container">
         <div class="row row-content">
@@ -143,7 +231,7 @@
         <div class="row row-content">
             <div class="offset-1 col-md-8 col-sm-12">
                 <div class="card">
-                    <h3 class="card-header bg-warning text-white">Reserve Table</h3>
+                    <h3 class="card-header bg-warning text-white" id="reserveform">Reserve Table</h3>
                     <div class="card-body">
                         <form>
                             <div class="form-group row">
@@ -197,7 +285,10 @@
                             </div>
 
                             <div class="form-group row">
-                                <div class="offset-md-2 col-md-10">
+                                <div class="offset-md-2 col-md-2">
+                                    <button type="submit" class="btn btn-default">Cancel</button>
+                                </div>
+                                <div class="col-md-5">
                                     <button type="submit" class="btn btn-primary">Reserve</button>
                                 </div>
                             </div>
@@ -263,11 +354,11 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
+    <!-- <script>
         $(document).ready(function() {
             $('[data-toggle="tooltip"]').tooltip();
         });
-    </script>
+    </script> -->
 </body>
 
 </html>
