@@ -66,3 +66,18 @@ body {
 	position: absolute;
 	bottom: 0px;
 }
+
+.modal-header {
+	background-color: #512DAB;
+	color: white;
+}
+
+.modal-body {
+	background: #9575CD;
+	color: floralwhite;
+}
+
+.btn-default {
+	background-color: gray;
+	color: white;
+}
